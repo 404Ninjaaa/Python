@@ -14,5 +14,29 @@ Substraction
 +
 -
 
+print(round(8/3,2))
+2.67
+print(8 // 3)
+2
+print(type(8/3))
+<class 'float'>
+print(type(8//3))
+<class 'int'>
+
+
+result = 4/2
+result /= 2
+print(result)
+1.0
+
+#f string
+score = 9
+weight = 80.5
+isWinning = True
+print(f"you got {score} score {weight} weight and you still get isWinning {isWinning}")
+you got 9 score 80.5 weight and you still get isWinning True
+
+
+
 
 
