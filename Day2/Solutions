@@ -1,4 +1,5 @@
-Write a program that calculates the body mass index (BMI) from a user's weight and height
+======================================================================================================================================
+//Write a program that calculates the body mass index (BMI) from a user's weight and height
 BMI = weight(kg)/(height)^2
 
 Solution
@@ -8,4 +9,59 @@ w = float(input("Please enter your weight: "))
 bmi = w/h**2
 
 print(round(bmi, 2))
+
+
+======================================================================================================================================
+//https://www.bryanbraun.com/your-life/weeks.html
+write a program using maths and f-Strings that tells us how many days,weeks,months we have left if you live until 90 years old
+Solution 1
+
+yd = int(input("Enter your birthday year: "))
+md = int(input("Enter your birthday month: "))
+dd = int(input("Enter your birthday day: "))
+
+cy = 2025
+cm = 5
+cd = 30
+
+ay = cy - yd
+am = cm - md
+ad = cd - dd
+
+if ad < 0:
+    ad += 30
+    am -= 1
+
+if am < 0:
+    am += 12
+    ay -= 1
+
+le = 90
+
+ry = le - ay
+
+rm = ry * 12 - am
+rw = ry * 52 - (am * 4)
+rd = ry * 365 - (am * 30 + ad)
+
+print(f"Your remaining years is: {ry}")
+print(f"Your remaining months is: {rm}")
+print(f"Your remaining weeks is: {rw}")
+print(f"Your remaining days is: {rd}")
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Solution 2
+
+age = int(input("What is your age: "))
+years_remaining = 90 - age
+days_remaining = years_remaining * 365
+weaks_remaining = years_remaining * 52
+months_remaining = years_remaining * 12
+
+print(f"you have {days_remaining} days, {weaks_remaining} weeks and {months_remaining} months remaining")
+
+======================================================================================================================================
+
+
+
 
