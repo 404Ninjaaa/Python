@@ -1,0 +1,11 @@
+Write a program that calculates the body mass index (BMI) from a user's weight and height
+BMI = weight(kg)/(height)^2
+
+Solution
+h = float(input("Please enter your height:"))
+w = float(input("Please enter your weight: "))
+
+bmi = w/h**2
+
+print(round(bmi, 2))
+
