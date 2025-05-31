@@ -62,6 +62,24 @@ print(f"you have {days_remaining} days, {weaks_remaining} weeks and {months_rema
 
 ======================================================================================================================================
 
+//Write a program that adds the digits in a 2 digit number. E.g if the input was 35, then the output should be 3+5 	‎ = 8
 
+Solution
+number = input("Please enter your number of 2 digit: ")
+print(f"The sum of {number} is", int(number[0]) + int(number[1]))
+
+======================================================================================================================================
+
+//tip calculator
+Solution
+
+print("Welcome to our tip calculato program")
+total = float(input("What was the total bill?"))
+tip = int(input("How much percentage do you want to give, 10, 12 or 15 percentage"))
+total_number_of_people = int(input("Enter number of people:"))
+each_person = (tip / 100 * total + total) / total_number_of_people
+print(round(each_person, 2))
+
+======================================================================================================================================
 
 
