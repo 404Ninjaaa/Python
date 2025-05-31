@@ -16,3 +16,49 @@ Draw.io
 
 It is good thing to make flow chart before code
 
+Multiple if
+If condition1:
+	do A
+If condition2:
+	do B
+If condition3:
+	do C
+
+
+print("Welcome to the rollercoaster")
+height = int(input("Input is your height in cm: "))
+bill = 0
+
+if height >=120:
+    print("You can ride rollercoaster")
+    age = int(input("Input your age: "))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5")
+    elif age <= 18:
+        bill = 7
+        print("Youth tickers are $7")
+    else:
+        bill = 12
+        print("Adult tickets are $12")
+    
+    want_photo = input("Do you want a photo taken ? Y for yes and N for no ")
+    if want_photo == "Y" or "y":
+        bill += 3
+    elif want_photo == "N" or "n":
+        pass
+    
+    print(f"Your total bill is {bill}")
+
+else:
+    print("Sorry, you have little babe, get out")
+    
+
+Logical operator
+A or B
+A and B
+Not C
+
+
+https://ascii.co.uk/art
+
