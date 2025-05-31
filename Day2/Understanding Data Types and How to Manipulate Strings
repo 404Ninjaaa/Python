@@ -1,4 +1,16 @@
 ======================================================================================================================================
+
+a = len(str(123))
+print(a)
+print(len("Hellothisisme"[0::2]))
+
+Subscript
+Print(“Hello”[0:])
+
+Type error, type checking, type convertion
+type()
+
+======================================================================================================================================
 PEMDAS
 
 Parentheses
@@ -37,6 +49,7 @@ isWinning = True
 print(f"you got {score} score {weight} weight and you still get isWinning {isWinning}")
 you got 9 score 80.5 weight and you still get isWinning True
 ======================================================================================================================================
+
 
 
 
