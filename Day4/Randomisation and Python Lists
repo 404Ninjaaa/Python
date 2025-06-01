@@ -1,0 +1,57 @@
+Randomization and python list
+
+
+Pythons uses Mersenne Twister for randomness
+
+askpython.com
+
+import random
+random_int = random.randint(1,223)
+print(random_int)
+
+How to create your own module (it is easy)\
+Just create new python file on which you can to collaborate with other developers
+And in your code just do “import their_pythonfile_name”
+
+
+
+
+
+If we can to do with float number then we can use random.random but it gives us random float number only between 0 to 1
+random_float = random.random()
+print(random_float)
+
+0.4049942374716222
+
+But what if we need more value not just only 0 - 1 then we can multiple it with integer
+
+import random
+random_int = random.randint(1,100)
+random_float = random.random()
+print(random_float*random_int)
+
+14.180569955073178
+
+
+
+
+
+Seed
+Python uses computer clock time as a seed by default but we can change it
+import random
+random.seed(16)
+print(random.randint(1,100))
+
+Now this code gonna give me same random number for entire time, always 47
+
+
+
+
+
+Lists
+Fruits = [item1, item2]
+
+
+
+
+
