@@ -51,6 +51,48 @@ Now this code gonna give me same random number for entire time, always 47
 Lists
 Fruits = [item1, item2]
 
+print(fruits[0])
+print(fruits[-1])
+
+
+
+fruits = ["banana", "apple"]
+
+print(fruits[0])
+print(fruits[-1])
+fruits[1] = "orange"
+print(fruits)
+fruits.append("apple")
+print(fruits)
+fruits.extend(["grape", "pineapple"])
+print(fruits)
+
+Result
+
+banana
+apple
+['banana', 'orange']
+['banana', 'orange', 'apple']
+['banana', 'orange', 'apple', 'grape', 'pineapple']
+
+
+Do not memorize all, if you memorize there will not be any space available for important stuffs knowing how things work
+
+Programming is kind of like an open book exam should not need to memorize
+
+
+
+https://docs.python.org/3/tutorial/
+
+
+
+List index out of range error
+
+
+Nested list , lists in list
+For example, vega and punk are lists, then we can do
+Vegapunk = [vega,punk]
+
 
 
 
