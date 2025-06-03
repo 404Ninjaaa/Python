@@ -1,0 +1,38 @@
+======================================================================================================================================
+
+// find out the average students height from the lists of height
+Solution
+
+student_h = input("Enter the list of heights: ").split()
+for n in range(0, len(student_h)):
+    student_h[n] = int(student_h[n])
+print(student_h)
+print(round((sum(student_h) / len(student_h)), 2))
+
+======================================================================================================================================
+
+//Highest Score exercise
+
+Solution 1
+
+student_scores = input("Input a list of student scores “).split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+print(student_scores)
+print(max(student_scores))
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Solution 2
+
+student_scores = input("Input a list of student scores ").split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+print(student_scores)
+
+highest_score = 0
+for score in student_scores:
+    if score > highest_score:
+        highest_score = score
+print("The highest score is ",highest_score)
+
+======================================================================================================================================
