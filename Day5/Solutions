@@ -36,3 +36,69 @@ for score in student_scores:
 print("The highest score is ",highest_score)
 
 ======================================================================================================================================
+// write a program that calculates the sum of all odds and the even numbers from 1 to 100, including 1 and 100.
+
+Solution 1
+print("Program to calculate the sum of odds and even")
+odd = []
+even = []
+for i in range (1,101):
+    if i % 2 == 0:
+        odd += [i]
+    else:
+        even +=[i]
+print(sum(odd))
+print(sum(even))
+
+print(sum(odd+even))
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Solution 2
+total = 0
+total1 = 0
+for number in range(2,101,2):
+    total += number
+print(total)
+for number1 in range(1,101,2):
+    total1 += number1
+print(total1)
+
+======================================================================================================================================
+// FizzBuzz
+Your program should print each number from 1 to 100 in turn.
+When the number is divisible by 3 then instead of printing the number it should print "Fizz".
+`When the number is divisible by 5, then instead of printing the number it should print "Buzz".`
+  `And if the number is divisible by both 3 and 5 e.g. 15 then instead of the number it should print "FizzBuzz"`
+Eg
+`1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz`
+
+Solution
+for i in range (1,101):
+    if i % 3 == 0 and i % 5 == 0:
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Fuzz")
+    else:
+        print(i)
+
+======================================================================================================================================
+
+// Password generator
+
+
