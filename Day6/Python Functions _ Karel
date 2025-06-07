@@ -2,3 +2,96 @@
 Code blocks, Functions, while loops
 
 Karel the robot
+
+functions
+Built-in-function ==> len(),abs(),any(),ascii(),bin(),list(),int(),print()
+
+User-defined-function ==> def my_function():
+
+Calling functions
+my_function()
+
+
+https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Harvest%201&url=worlds%2Ftutorial_en%2Fharvest1.json
+
+
+
+
+
+Give extra look on indentations
+
+4 spaces == tab
+
+Spaces vs tabs
+
+Tabs vs Spaces debate is a classic one in programming
+Most style guides (like PEP 8 for Python) recommend using 4 spaces per indentation level.
+
+Tabs
+Smaller (1 character per indent)
+Yes (users can set tab width in editor)
+❌ Can appear differently in different editors
+Rarely recommended
+Can cause hard-to-find bugs if mixed with spaces
+
+Spaces
+Larger (multiple characters per indent)
+No (fixed width unless using soft tabs)
+✅ Always consistent
+Preferred by most languages’ style guides
+Also problematic when mixed, but generally more stable
+
+
+Spaces are better because they give consistent, predictable, and standard-compliant indentation across all environments.
+
+Final Verdict:
+Use spaces unless your team/project explicitly requires tabs.
+
+
+
+While loop
+For vs while
+for item in list_of_items:
+	#do something to each item
+for number in range(a,b):
+	print(number)
+
+while something_is_true
+	#do something repeatedly
+
+
+For loop
+When you know how many times to repeat
+Compact and ideal for loops with counters
+Loop control is usually built-in (start, stop, step)
+
+
+# Print numbers 1 to 5
+for i in range(1, 6):
+    print(i)
+
+Best when you know how many times you want to loop.
+
+
+While loop
+When you don’t know how many times to repeat
+More flexible, good for condition-based loops
+You must manually manage conditions and counters
+
+# Keep asking until user says 'yes'
+answer = ""
+while answer != "yes":
+    answer = input("Say yes to continue: ")
+
+Best when the number of repetitions depends on a condition.
+
+
+
+
+Which loop is most used and better?
+Most used: for loop ==> because it's cleaner, more compact, and widely used for known iteration (like lists, counters, ranges).
+
+"Better" depends on the task but generally:
+	Use for when you know how many times or what you're looping over.
+	Use while when the loop depends on a condition that might change unpredictably.
+
