@@ -1,3 +1,4 @@
+======================================================================================================================================
 
 Challenge 1 - Picking a Random Words and Checking Answers
 
@@ -13,6 +14,7 @@ for i in random_value:
     else:
         print("Wrong")
 
+======================================================================================================================================
 
 Challenge 2 - Loop through each position in the choosen_word, If the letter in the display at that position. Eg. If the user guessed “p” and the Chosen word was “apple”, then display should be [“_”,”p”,”p”,”_”,”_”]
 
@@ -35,6 +37,7 @@ for position in range(word_length):
 
 print(display)
 
+======================================================================================================================================
 
 Challenge 3 - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and ‘display’ has no more blanks (“_”). Then you can tell the user they’ve won.
 
@@ -62,6 +65,7 @@ while not end_game:
         end_game = True
         print("You win")
 
+======================================================================================================================================
 
 Challenge 4 - hangman image/ascii  things and create a variable called “lives” to keep track of the number of lives left. Set ‘lives’ to equal to 7.
 
@@ -157,6 +161,109 @@ while not end_game:
         print("You win")
         
     print(stages[lives])
+
+======================================================================================================================================
+
+
+Challenge 5 - Update the word list to use the ‘word_list’ with different wordlist file
+Have some error fix it
+
+Solution
+
+import random
+
+stages = [r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''', 
+r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', 
+r'''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', 
+r'''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', 
+r'''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', 
+r'''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', 
+r'''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''']
+
+
+lives = 7
+
+from hangman_words import word_list
+
+random_value = random.choice(word_list)
+display = []
+word_length = len(random_value)
+for letter in range(word_length):
+    display += "_"
+
+end_game = False
+
+while not end_game:
+    user_value = input("Enter your letter: ").lower()
+    for position in range(word_length):
+        letter = random_value[position]
+        if user_value == letter:
+            display[position] = letter
+    
+    if user_value not in random_value:
+        lives -= 1
+        if lives == 0:
+            end_game = True
+            print("You lose")
+
+    print(display)
+    if "_" not in display:
+        end_game = True
+        print("You win")
+    
+    print(stages[lives])
+
+
+======================================================================================================================================
 
 
 
