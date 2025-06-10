@@ -1,0 +1,16 @@
+Challenge 1 - Picking a Random Words and Checking Answers
+
+
+
+Challenge 2 - Loop through each position in the choosen_word, If the letter in the display at that position. Eg. If the user guessed “p” and the Chosen word was “apple”, then display should be [“_”,”p”,”p”,”_”,”_”]
+
+
+
+Challenge 3 - Use a while loop to let the user guess again. The loop should only stop once the user has guessed all the letters in the chosen_word and ‘display’ has no more blanks (“_”). Then you can tell the user they’ve won.
+
+
+
+Challenge 4 - hangman image/ascii  things and create a variable called “lives” to keep track of the number of lives left. Set ‘lives’ to equal to 7.
+
+
+
