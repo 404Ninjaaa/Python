@@ -1,0 +1,58 @@
+
+Functions with input arguments and parameters
+
+def my_function():
+	# do this
+	# Then do this
+	# Finally do this
+my_function()
+
+Function with input
+
+def my_function(something):
+	# do this something
+	# Then do this
+	# Finally do this
+my_function(123)
+
+Here parameter = something
+Argument = 123
+
+def great(name):
+    print(f"apple{name}")
+    print(f"ball{name}")
+    print(f"cat{name}")
+
+great("salman")
+
+
+
+Positional vs keyword arguments
+
+Functions with more than one input
+
+def great(name,color):
+    print(f"apple{name}{color}")
+    print(f"ball{name}{color}")
+    print(f"cat{name}{color}")
+
+great("salman","red")
+
+
+
+Positional argument
+Def my_function(a,b,c)
+my_function(1,2,3)
+
+A = 1
+B = 2
+C = 3
+
+
+Keyword Arguments
+Def my_function(a,b,c)
+my_function(c=1,a=2,b=3)
+
+A ‎ = 2
+B = 3
+C = 1
