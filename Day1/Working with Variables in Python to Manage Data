@@ -13,3 +13,99 @@ Don’t use any AI unless it is important. I want you to learn it by yourself.
 Let’s gooooooooooooo!!!!
 
 
+
+https://replit.com/@appbrewery/day-1-printing-start
+
+print(“Hello World”)
+Strings = ""
+Errors
+1. Syntax Error – Code structure is incorrect (e.g., missing : or brackets).
+2. Runtime Error – Error occurs while the program is running (e.g., division by zero).
+3. Logical Error – Code runs but gives wrong output due to flawed logic.
+4. Semantic Error – Code is syntactically correct but does the wrong thing.
+5. Compilation Error – Error during code compilation (e.g., type mismatch, missing semicolon).
+6. Type Error – Operation used on the wrong data type (e.g., string + int).
+7. Name Error – Variable or function is used without being defined.
+8. Index/Key Error – Accessing a non-existent index in a list or key in a dictionary.
+
+
+If you got problem then search on google, it is not a good practice to memorize everything, it is not even possible
+
+‘’ Vs “”
+
+print("Hello World!\n hello world")
+Hello World!
+ hello world
+
+String concatenation
+
+print("Apple"+" Ball")
+print("Apple" + " " + "Ball”)
+
+Apple Ball
+
+Take input
+a = input("What is your name? ")
+print(a)
+print(type(a))
+
+What is your name? s
+s
+<class 'str'>
+
+
+Type conversion
+a = input("What is your number? ")
+print(a)
+a = int(a)
+print(type(a))
+
+What is your number? 1
+1
+<class 'int'>
+
+
+https://thonny.org/
+
+# single line comment
+‘’’
+‘’’ Multi line comment
+
+In Python, variables are names used to store data.
+Like name = salman
+name is variable here
+
+Based on Data Type:
+1. int – Integer (e.g., x = 10)
+2. float – Floating-point number (e.g., pi = 3.14)
+3. str – String (e.g., name = "Alice")
+4. bool – Boolean (e.g., flag = True)
+5. list – Ordered, mutable sequence (e.g., nums = [1, 2, 3])
+6. tuple – Ordered, immutable sequence (e.g., t = (1, 2))
+7. set – Unordered, unique values (e.g., s = {1, 2, 3})
+8. dict – Key-value pairs (e.g., d = {"a": 1})
+
+Based on Scope:
+1. Global variable – Defined outside functions, accessible anywhere.
+2. Local variable – Defined inside a function, accessible only there.
+3. Nonlocal variable – Used in nested functions to refer to outer scope.
+
+Special Types:
+1. Constant – Not a real type, but by convention written in all caps (e.g., PI = 3.14)
+2. Class variable – Shared by all instances of a class.
+3. Instance variable – Unique to each instance of a class.
+
+
+🔹 Rules (must follow)
+1. ✅ Can start with a letter (A–Z or a–z) or an underscore _ – Example: name, _temp
+2. ❌ Cannot start with a number – Invalid: 1name ❌
+3. ✅ Can contain letters, numbers, and underscores – Example: user_123, value2
+4. ❌ No spaces or special characters like @, #, !, -, etc. – Invalid: user-name ❌
+5. ❌ Cannot be a Python keyword (e.g., class, if, for, etc.) – Invalid: def = 10 ❌
+
+🔸 Conventions (best practices)
+1. 🐍 snake_case for regular variables – Example: user_name, total_price
+2. 🔠 UPPER_CASE for constants (by convention) – Example: PI = 3.14, MAX_SPEED = 100
+3. 👩‍🏫 Descriptive names are better than short/unclear ones – ✅ user_age > ❌ ua
+4. 🔂 Use _ to separate words (not camelCase) – ✅ file_name > ❌ fileName (though camelCase is not wrong)
+5. ⚠️ Avoid single-letter names unless used in loops or math – ✅ for i in range(10): is fine – ❌ x = 1 (unless it's a quick calculation)
