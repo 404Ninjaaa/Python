@@ -1,0 +1,23 @@
+// Write a program in main.py that prints the same notes from the previous lesson using what you have learnt about the Python print function.
+After you have written your code, you should run your program and it should print the following:
+Day 1 - Python Print Function
+The function is declared like this:
+print('what to print')
+
+
+
+//Debug this
+#Fix the code below 👇
+
+print(Day 1 - String Manipulation")
+print("String Concatenation is done with the "+" sign.")
+  print('e.g. print("Hello " + "world")')
+print(("New lines can be created with a backslash and n.")
+
+
+
+// Write a program that prints the number of characters in a user's name. You might need to Google for a function that calculates the length of a string.
+
+
+
+// Write a program that switches the values stored in the variables a and b.
