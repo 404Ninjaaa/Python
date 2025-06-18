@@ -1,0 +1,82 @@
+Functions with outputs
+
+def my_function():
+	# do this
+	# Then do this
+	# Finally do this
+my_function()
+
+Function with input
+
+def my_function(something):
+	# do this something
+	# Then do this
+	# Finally do this
+my_function(123)
+
+Here parameter = something
+Argument = 123
+
+def great(name):
+    print(f"apple{name}")
+    print(f"ball{name}")
+    print(f"cat{name}")
+
+great("salman")
+
+
+Functions with outputs
+
+def my_function():
+	result = 3 * 2
+	return
+
+
+def format_name(f_name,l_name):
+    formated_f_name = f_name.title()
+    formated_l_name = l_name.title()
+    return f"{formated_f_name} {formated_l_name}"
+
+print(format_name("angela","AngElA"))
+
+
+Multiple Return Values
+
+def format_name(f_name,l_name):
+    if f_name == "" or l_name == "":
+        return "you didn't enter anything"
+    formated_f_name = f_name.title()
+    formated_l_name = l_name.title()
+    return f"{formated_f_name} {formated_l_name}"
+    
+print(format_name(input("Enter is your first name: "),input("Enter your last name: ")))
+
+
+Docstrings ==> it is basically a way us to create little bit of document 
+
+def format_name(f_name,l_name):
+    """Take a first and last name and format it to return the title case version of the name """
+
+
+Printing vs Returning ?
+🖨️ 1. print() – For Displaying Output
+* Purpose: Used to show something on the screen (console).
+* Side effect: It outputs a string to the console but does not give a value you can use later in the code.
+* Use case: Debugging, logging, showing results to users.
+python
+def add(a, b):
+    print(a + b)  # Just prints the result, doesn't return it
+
+result = add(2, 3)  # Prints 5, but `result` is None
+
+
+🔁 2. return – For Sending Back a Value
+* Purpose: Passes data back to the caller of the function.
+* Reusable: The returned value can be stored, used in calculations, or passed to other functions.
+* Use case: Logic, data processing, calculations, APIs, etc.
+
+def add(a, b):
+    return a + b  # Returns the result
+
+result = add(2, 3)  # `result` is 5, can be reused
+print(result)       # You decide when/if to print
