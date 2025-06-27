@@ -10,3 +10,64 @@ Output
 Number of enemies are 2
 Number of enemies are 1
 
+
+Local scope
+Exists with in functions
+
+drink_potion()
+print(potion_strength)
+
+Output
+2
+ERROR!
+Traceback (most recent call last):
+  File "<main.py>", line 6, in <module>
+NameError: name 'potion_strength' is not defined
+
+
+Global scope
+Access from anywhere
+
+player_health = 10
+def drink_potion():
+    potion_strength = 2
+    print(player_health)
+
+drink_potion()
+
+Output
+10
+
+
+How to modify a global variables
+
+enemies = 1
+def increase_enimies():
+    global enemies
+    enemies += 1
+    print(f"Number of enemies are {enemies}")
+
+increase_enimies()
+print(f"Number of enemies are {enemies}")
+
+Output
+Number of enemies are 2
+Number of enemies are 2
+
+Namespace means where you put the variable, it apply to anything
+
+Instead you can do use return
+enemies = 1
+def increase_enimies():
+    print(f"Number of enemies are {enemies}")
+    return enemies + 1
+
+increase_enimies()
+print(f"Number of enemies are {enemies}")
+
+
+
+Python constants and global scope
+Global constants are those things that you will never change like, try to make it all uppercase standard practice
+PI ‎ = 3.142
+
