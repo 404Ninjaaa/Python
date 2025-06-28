@@ -1,0 +1,31 @@
+Debugging
+
+Tips and techniques to identify bugs
+1. Describe the problem - know what is going on and logic behind it, asking what is this, why am I doing this,
+2. Reproduce the bug - try to find out when bug occurs, and which part, change different values and observe errors
+3. Play computer - act like a computer mimic it, see in the style of computer see the code step by step, first this one then it goes here, then here and ohh why am I doing this here it is a bug
+4. Fixing the errors
+5. Use print to debug and find bug 
+For example
+pages = 0
+word_per_pages = 0
+pages = int(input("Number of pages: "))
+word_per_pages == int(input("Number of words per pages: "))
+total_words = pages * word_per_pages
+print(f"pages = {pages}")
+print(f"word_per_pages = {word_per_pages}")
+print(total_words)
+
+Output
+Number of pages: 34
+Number of words per pages: 564
+pages = 34
+word_per_pages = 0
+0
+
+
+6. Use a debugger - https://pythontutor.com/
+7. Take a break 🤣
+8. Run often
+9. Ask friends, take it as challenge
+10. If these things didn’t work, use ai, stackoverflow
