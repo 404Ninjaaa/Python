@@ -1,0 +1,60 @@
+import random
+logo = r'''                                                                                                                                        
+
+  _  _            _                ___                _              ___                
+ | \| |_  _ _ __ | |__  ___ _ _   / __|_  _ ___ _____(_)_ _  __ _   / __|__ _ _ __  ___ 
+ | .` | || | '  \| '_ \/ -_) '_| | (_ | || / -_|_-<_-< | ' \/ _` | | (_ / _` | '  \/ -_)
+ |_|\_|\_,_|_|_|_|_.__/\___|_|    \___|\_,_\___/__/__/_|_||_\__, |  \___\__,_|_|_|_\___|
+                                                            |___/                       
+'''
+
+print(logo)
+
+print("Welcome to the Number Guessing Game!")
+print("I'm thinking of number between 1 and 100")
+
+secret_number = random.randint(1, 100)
+
+def set_difficulty(level):
+    if level == "easy":
+        return 10
+    elif level == "hard":
+        return 5
+    else:
+        return None
+
+difficulty_level = input("Choose your difficulty level 'easy' or 'hard': ").lower()
+attempt = set_difficulty(difficulty_level)
+print(f"You have chosen {difficulty_level}, so you have {attempt} attempts: ")
+
+def game():
+    global attempt
+    while attempt > 0:
+        try:
+            user_number = int(input("Make a guess: "))
+        except ValueError:
+            print("nvalid input. Please enter a number.")
+            continue
+
+        if user_number == secret_number:
+            print("You got it!")
+            return
+        elif user_number > secret_number and (user_number - secret_number) <= 5:
+            print("Too Close")
+        elif user_number > secret_number and (user_number - secret_number) <= 10:
+            print("Close")
+        elif user_number > secret_number:
+            print("Too high")
+        elif secret_number > user_number and (secret_number - user_number) <= 5:
+            print("Too Close")
+        elif secret_number > user_number and (secret_number - user_number) <= 10:
+            print("Close")
+        else:
+            print("Too low")
+        
+        attempt -= 1
+        print(f"You have {attempt} attempts remaining.\n")
+
+    print(f"You're out of attempts. The number was {secret_number}.")
+
+game()
