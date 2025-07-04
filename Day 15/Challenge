@@ -1,0 +1,23 @@
+// Challenge 
+The Coffee machine
+Makes 3 hot flavors
+1. Espresso ==> 50ml water, 18g coffee, $1.50
+2. Latte ==> 200ml water, 24g coffee, 150ml milk, $2.50
+3. Cappuccino ==> 250ml water, 24g coffee, 100ml water, $3.00
+
+In machine there are
+300ml water, 200ml milk and 100g coffee
+
+Coin operated
+4 types of coins
+Penny => 1 cent ==> $0.01
+Dime ==> 10 cents ==> $0.10
+Nickel ==> 5 cents ==> $0.05
+Quarter ==> 25 cents ==> $0.25
+
+Program requirements
+1. Print report ==> how much water or other stuffs left
+2. Check resources sufficient
+3. Process coin ==> check and give change
+4. Check transaction successful ?
+5. Make coffee
