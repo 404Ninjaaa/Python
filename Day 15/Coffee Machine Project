@@ -1,0 +1,21 @@
+Setup local Development Environment and Coffee Machine Project
+
+IDE ==> Intelligent Development Environment
+
+￼
+recommended to use PyCharm ==> used by professionals
+
+See codes side by side ==> right click and the split and move right
+Buit-in linter
+￼
+Pep 8 - Style Guide for Python Code
+
+https://peps.python.org/pep-0008/
+
+See local history on pycharm
+
+If you want to change to name of the function then you can use, refactor 
+
+On Mac, holding control and click ==> right click
+
+If you want to do same thing in different line you can do option + shift key and drag or click where you want to change.
