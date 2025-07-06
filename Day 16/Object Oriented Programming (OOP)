@@ -1,0 +1,130 @@
+Day 16
+
+OOP (Object Oriented Programming)
+
+Traditional style ==> Procedural Programming
+
+￼
+Procedure programming looks like this, OOP helps to manage things helps to do complex things
+
+￼
+
+Object
+￼
+Attributes ==> Fancy word of variables
+Methods ==> Fancy word of functions
+
+An object ==> is just way of combining some piece of data and some functionality
+We can generate multiple versions of the same object, for example there is a object for waiter defining what they has and what they can do, now we can multiple waiters using the same object, In oop we call it blueprint or class, and we call individual waiter an object
+
+For example, there is blueprint for making a car, then that is a class whereas the car is and object
+￼
+car = CarBlueprint(), here cat is an object and CarBlueprint() is class, we write class in a pascal case
+
+
+Turtle graphics module
+￼
+import turtle
+timmy = turtle.Turtle()
+
+Here, c means class auto suggest by pycharm, in this part we have import blueprint for making turtle object. f means attributes and m means method, it will help a lot.
+
+Or we can do this
+
+from turtle import Turtle
+timmy = Turtle()
+print(timmy)
+
+<turtle.Turtle object at 0x10721df40>
+
+
+
+Object Attributes
+car.speed ==> accessing attribute, where speed is attribute
+Example canvheight
+
+from turtle import Turtle, Screen
+timmy = Turtle()
+print(timmy)
+
+my_screen = Screen()
+print(my_screen.canvheight)
+
+
+Object Methods
+car.stop() ==> accessing method or function, where stop() is method
+
+For example, exitonclick()
+
+from turtle import Turtle, Screen
+timmy = Turtle()
+print(timmy)
+
+my_screen = Screen()
+print(my_screen.canvheight)
+timmy.shape("turtle")
+my_screen.exitonclick()
+
+
+You don’t need to memorize everything just look at python docs 
+https://docs.python.org/3/library/turtle.html
+
+
+Python Package
+
+* A module is a single Python file (.py) that contains functions, classes, or variables.
+* It allows you to organize code into smaller, reusable pieces.
+import my_module
+my_module.greet()
+
+
+
+A package is a directory (folder) that contains a special __init__.py file (can be empty) and can contain multiple modules and sub-packages.
+It helps organize modules into a hierarchical structure.
+
+my_package/
+├── __init__.py
+├── module1.py
+└── module2.py
+
+https://pypi.org/
+
+pip install prettytable
+To see the actual code for the package, just right click on import prettytable then go to and and implementation(s)
+
+￼
+from prettytable import PrettyTable
+table = PrettyTable()
+table.field_names = ["Day", "Date", "Exercise", "Duration (min)", "Calories Burned"]
+table.add_row(["Monday", "2023-10-16", "Running", 30, 300])
+table.add_row(["Tuesday", "2023-10-17", "Cycling", 45, 400])
+table.add_row(["Wednesday", "2023-10-18", "Swimming", 60, 500])
+table.add_row(["Thursday", "2023-10-19", "Yoga", 30, 200])
+table.add_row(["Friday", "2023-10-20", "Weight Training", 40, 350])
+table.add_row(["Saturday", "2023-10-21", "Hiking", 120, 600])
+table.add_row(["Sunday", "2023-10-22", "Rest Day", 0, 0])
+table.add_row(["Total", "", "", 325, 2350])
+print(table)
+
++-----------+------------+-----------------+----------------+-----------------+
+|    Day    |    Date    |     Exercise    | Duration (min) | Calories Burned |
++-----------+------------+-----------------+----------------+-----------------+
+|   Monday  | 2023-10-16 |     Running     |       30       |       300       |
+|  Tuesday  | 2023-10-17 |     Cycling     |       45       |       400       |
+| Wednesday | 2023-10-18 |     Swimming    |       60       |       500       |
+|  Thursday | 2023-10-19 |       Yoga      |       30       |       200       |
+|   Friday  | 2023-10-20 | Weight Training |       40       |       350       |
+|  Saturday | 2023-10-21 |      Hiking     |      120       |       600       |
+|   Sunday  | 2023-10-22 |     Rest Day    |       0        |        0        |
+|   Total   |            |                 |      325       |       2350      |
++-----------+------------+-----------------+----------------+-----------------+
+
+Hotel
+hotel.dry_clean()
+
+
+
+
+
+
+
