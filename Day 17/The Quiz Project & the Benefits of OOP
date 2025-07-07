@@ -1,0 +1,129 @@
+
+Goal a true false game using OOPs
+
+class User:
+    pass
+
+user1 = User()
+
+Created class and built object, simple
+
+We use PascalCase for class
+
+camelCase
+
+snake_case
+
+Dealing with attributes
+
+class User:
+    pass
+
+user1 = User()
+user1.id = 1
+user1.username = "john_doe"
+
+print(user1.id)
+
+Well if we have to add more users then I have to this again like user2.id, user2.username ? No 
+
+
+
+Concept of constructor
+Constructor is the part of the blueprint which allow us to specify, what should happen when our object being constructed ? It is also known as initialize in programming
+￼
+Initialize means to set (variables, counters, switches, etc.) to their starting values at the beginning of a program or subprogram.
+
+In python the way we create constructor by using special function, __init__ function
+￼
+Inside init we initialize or create the starting values for our attributes, the init function is going to be called every time you create a new object from the class
+
+class User:
+    def __init__(self):
+        print("hi")
+
+user1 = User()
+user1.id = 1
+user1.username = "john_doe"
+
+print(user1.id)
+
+user2 = User()
+user2.name = 1
+user1.username = "john_doe"
+
+hi
+1
+hi
+
+Attributes are the things that object have basically the variables 
+class Car:
+    def __init__(self,seats):
+        self.seats = seats
+
+self is an actual object and then we can add as many parameters as we want and that parameter is going to be passed in when an object is constructed from the class and once you received that data you can use it to set object attributes
+
+class Car:
+    def __init__(self,seats):
+        self.seats = seats
+
+Car1 = Car(5)
+It is same to
+Car2.seats = 7
+
+
+
+class User:
+    def __init__(self,user_id,username):
+        self.id = user_id
+        self.username = username
+
+user1 = User(1, "john_doe")
+print(user1.id)
+
+username and username can be same
+
+￼
+￼
+It is also not good, to initialize everything each time, you can create a default value that will work on every object you will make by default for example
+class User:
+    def __init__(self,user_id,username):
+        self.id = user_id
+        self.username = username
+        self.followers = 0
+
+user1 = User(1, "john_doe")
+print(user1.followers)
+
+0
+
+￼
+We can also add methods, which is like a function, when a function is attached to an object then it is called a method
+￼
+class User:
+    def __init__(self,user_id,username):
+        self.id = user_id
+        self.username = username
+        self.followers = 0
+        self.following = 0
+
+    def follow(self,user):
+        user.followers += 1
+        self.following += 1
+
+user1 = User(1, "john_doe")
+user2 = User(2, "mary_smith")
+
+user1.follow(user2)
+print(user1.followers)
+print(user1.following)
+print(user2.followers)
+print(user2.following)
+
+0
+1
+1
+0
+
+
+https://opentdb.com/
