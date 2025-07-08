@@ -1,0 +1,85 @@
+Turtle Graphics, Tuples and modules
+￼
+Python turtle
+Turtle graphics
+
+from turtle import Turtle, Screen
+
+timmy_the_turtule = Turtle()
+screen = Screen()
+screen.exitonclick()
+
+But how do I know all things ? No I don’t, I google it
+
+https://docs.python.org/3.3/library/turtle.html?highlight=turtle
+
+from turtle import Turtle, Screen
+
+timmy_the_turtule = Turtle()
+timmy_the_turtule.shape("turtle")
+timmy_the_turtule.color("coral")
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(200)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(200)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(200)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+timmy_the_turtule.right(90)
+timmy_the_turtule.forward(100)
+
+screen = Screen()
+screen.exitonclick()
+￼
+
+Import modules
+
+Import ==> keyword
+Turtle ==> module names
+
+How to make class
+
+Import turtle
+Tim = turtle.Turtle() ==> here, we first import module and then to create class we use turtle.Turtle() module.class  but Instead to do this we can do this
+
+From turtle import Turtle ==> keyword module keyword thing in module
+Tim = Turtle()
+Tom = Turtle()
+
+Another method is *
+We can use it to import all the things from module but there is an disadvantages too, it make confusing from where the classes or methods are comming from for example,
+From random import *
+Choice([1,2,3])
+Now we don’t from where choice is comming from
+
+
+Aliasing Method
+import turtle as t ==> keyword module keyword alias name
+Tim = t.Turle()
+
+https://pypi.org/
+
+
+
+Python tuple
+It is a datatype in python
+(1,3,8)
+In tupple you can’t change the value of it
+
+
