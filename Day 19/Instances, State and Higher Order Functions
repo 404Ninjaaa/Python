@@ -1,0 +1,100 @@
+
+Turtle Graphics, Event Listeners, State and Multiple Instances
+
+Turtle Event Listeners
+In docs there is a whole section of screen events
+￼
+Functions as inputs
+For example
+def function_a(something):
+	# some work
+def  function_b(something):
+	# some work
+
+funtion_a(function_b)
+
+Here we don’t need to give (), we can directly write function_a(function_b)
+
+def add(n1, n2):
+    return n1 + n2
+def subtract(n1, n2):
+    return n1 - n2
+def multiply(n1, n2):
+    return n1 * n2
+def divide(n1, n2):
+    return n1 / n2
+def calculator(n1, n2, funct):
+    return funct(n1, n2)
+
+print(calculator(3, 5, add))
+
+8
+￼
+
+It is because of higher order functions
+￼
+￼
+￼
+
+Just like you and me are examples of human object, that’s how Timmy and Tommy are examples of turtle object
+
+￼
+
+State vs instances
+
+🧠 1. What is an Instance?
+An instance is a specific object created from a class.
+🔸 Think of a class as a blueprint, and an instance as a real object built from that blueprint.
+🔧 Example:
+python
+CopyEdit
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+dog1 = Dog("Buddy")
+dog2 = Dog("Max")
+Here:
+* Dog → class
+* dog1, dog2 → instances of the class Dog
+
+🎯 2. What is the State?
+The state of an object (instance) refers to the current values of its attributes (its data).
+🧪 Continuing the example:
+python
+CopyEdit
+print(dog1.name)  # Buddy
+print(dog2.name)  # Max
+Each instance has a different state:
+* dog1 has a state: name = "Buddy"
+* dog2 has a state: name = "Max"
+🔑 So, state = the data held in an object at a given time.
+
+🧩 Summary Table
+Concept	Description
+Class	Blueprint for creating objects
+Instance	A real object created from the class
+State	The current values of the attributes of that instance
+
+💡 Analogy
+Imagine a class called Car:
+python
+CopyEdit
+class Car:
+    def __init__(self, color, speed):
+        self.color = color
+        self.speed = speed
+You create two instances:
+python
+CopyEdit
+car1 = Car("red", 100)
+car2 = Car("blue", 120)
+* car1 and car2 → instances
+* Their colors and speeds → their states
+
+✅ Final Thought:
+* Instance = Object
+* State = Data inside the object
+
+
+
