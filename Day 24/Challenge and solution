@@ -1,0 +1,62 @@
+
+Local File System and directories
+
+# Read and write
+file = open(“my_file.txt”) # ==> file has been opened
+#Now how to read
+contents = file.read()
+print(contents)
+file.close() # ==> it is necessary to close file because it will take resources just like closing tabs after use
+
+
+It is a better idea to use “with” and “as” instead of just closing file manually
+
+
+
+with open("my_file.txt") as file:
+    content = file.read()
+    print(content)
+
+Same for writting but with some modes, by default it is in read mode ‘r’
+Some modes
+‘w’ ==> write it will remove previous data too
+‘a’ ==> it will append data
+
+
+with open("my_new_file.txt",mode='w') as file:
+    file.write("\nThis is a new file")
+
+It will create new file, if you don’t have one
+
+
+Absolute vs Relative path
+
+
+
+//Challenge mail merging
+
+Readlines ==> returns all lines in a file, as a list where each line is an item in the list object
+
+
+PLACEHOLDER ="[name]"
+
+with open("invited_name.txt") as names_file:
+    names = names_file.readlines()
+
+with open("./Letters/starting_letter.docx") as names_file:
+    letter_content = names_file.read()
+    for name in names:
+        stripped_name = name.strip()
+        new_letter = letter_content.replace(PLACEHOLDER, stripped_name)
+        with open(f"./Letters/letter_for{stripped_name}.docx", mode='w') as completed_letter:
+            completed_letter.write(new_letter)
+
+ 
+
+
+
+
+
+
+
+
