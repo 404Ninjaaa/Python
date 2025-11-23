@@ -111,3 +111,78 @@ Special Types:
 3. 👩‍🏫 Descriptive names are better than short/unclear ones – ✅ user_age > ❌ ua
 4. 🔂 Use _ to separate words (not camelCase) – ✅ file_name > ❌ fileName (though camelCase is not wrong)
 5. ⚠️ Avoid single-letter names unless used in loops or math – ✅ for i in range(10): is fine – ❌ x = 1 (unless it's a quick calculation)
+
+
+
+
+------
+print(6 * (1/10))
+print(1/10 + 1/10 + 1/10)
+print(6 * 1/10)
+print(10 * (1/10))
+print(format(6 * (1/10)))
+print(format(12/5,'.2f'))
+print(format(2 ** 100,'.6e'))
+print(format(13402.25,',.2f'))
+print(format(13402.25,'.2f'))
+print(ord('A'))
+print(chr(65))
+#print(ord('Hello World')) # error
+for i in "Hello World":
+    print(ord(i), end=" ")
+print(format('Hello','>20'))
+print('Hello world', format('.', '.<30'), 'Have a Nice Day!')
+print(format('Hello World','^40'))
+print(format('-','-<20'),'Hello World', format('-','->20'))
+f_1 = 10.5
+f_2 = 1.5e2
+f_3 = 1.5e-3
+print(f_1,f_2,f_3)
+unicode = u"\U0001f600\U0001f606\U0001f923"
+raw_string = r"raw \n string"
+path = r"C:\Users\legend\Documents\project"
+print(path)
+a = None #for future use, declare variable without any value
+print(a)
+-----
+Result
+0.6000000000000001
+0.30000000000000004
+0.6
+1.0
+0.6000000000000001
+2.40
+1.267651e+30
+13,402.25
+13402.25
+65
+A
+72 101 108 108 111 32 87 111 114 108 100                Hello
+Hello world .............................. Have a Nice Day!
+              Hello World               
+-------------------- Hello World --------------------
+10.5 150.0 0.0015
+C:\Users\legend\Documents\project
+None
+
+
+** Process exited - Return Code: 0 **
+----
+key words in python
+---
+False	await	else	import	pass
+None	break	except	in	raise
+True	class	finally	is	return
+and	continue	for	lambda	try
+as	def	from	nonlocal	while
+assert	del	global	not	with
+async	elif	if	or	yield
+---
+true division => / 25/10 => 2.5
+truncating division => // 25 // 10 => 10
+---
+infix notation
+
+
+
+
