@@ -1,0 +1,120 @@
+Encapsulation
+
+# instance variables ==> those variable we make under constructor are instance variables
+￼
+self.__pin = "" ==> Make it private
+
+￼
+Encapsulation means wrapping data (variables) and methods (functions) inside a class and controlling who can access them.
+To protect data, hide unnecessary details, and prevent accidental changes.
+like a capsule that stores medicine inside — you can’t directly touch what's inside unless the capsule allows you.
+Python doesn’t have strict private/public keywords like Java or C++.
+But it follows a naming convention:
+
+Access Type	Syntax	Meaning
+Public	variable	Accessible everywhere
+Protected	_variable	Should not be accessed directly
+Private	__variable	Not accessible from outside the class
+
+Public Attributes
+class Student:
+    def __init__(self, name, age):
+        self.name = name   # public
+        self.age = age     # public
+
+s = Student("John”, 21)
+
+print(s.name)   # allowed
+print(s.age)    # allowed
+
+
+Protected Attributes
+Don’t access this outside class unless necessary”
+class Student:
+    def __init__(self, name, marks):
+        self._marks = marks   # protected
+
+s = Student("Amit", 92)
+
+print(s._marks)  # allowed but NOT recommended
+
+
+Private Attributes
+class Student:
+    def __init__(self, password):
+        self.__password = password  # private variable
+
+s = Student("mypassword")
+
+print(s.__password)   # Error
+
+
+How to Access Private Data Safely?
+With getters and setters.
+
+GETTER (to read private data)
+class Student:
+    def __init__(self, password):
+        self.__password = password
+
+    def get_password(self):
+        return self.__password
+
+SETTER (to modify private data)
+    def set_password(self, new_pass):
+        self.__password = new_pass
+
+———
+Full Example of Encapsulation
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance   # private variable
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.__balance:
+            self.__balance -= amount
+
+    def get_balance(self):
+        return self.__balance
+
+———
+acc = BankAccount(1000)
+
+acc.deposit(500)
+print(acc.get_balance())  # 1500
+
+acc.withdraw(300)
+print(acc.get_balance())  # 1200
+
+print(acc.__balance)  # ❌ Error (private)
+
+———
+
+Name Mangling
+Python internally changes:
+__balance
+To
+_BankAccount__balance
+
+You can access it (but never recommended):
+print(acc._BankAccount__balance)
+
+———
+
+# reference variable
+A reference variable is a variable that does not hold the actual object, but holds the address (reference) of the object in memory.
+
+s1 = Student(“John”)
+s2 = s1
+
+You didn't create two objects.
+You created one object, with two references.
+
+A reference variable does NOT store data.
+It stores the address of the object.
+
+
