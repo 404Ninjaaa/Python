@@ -1,0 +1,173 @@
+https://www.tutorialsteacher.com/python/magic-methods-in-python
+
+------
+OOP (Object-Oriented Programming) is a style of programming where you design your program around objects — like real-world things.
+Objects have:
+* Attributes (variables) → describe the object
+* Methods (functions) → actions the object can perform
+Example from real life: A Car has:
+* Attributes → color, speed, model
+* Methods → start(), stop(), accelerate()
+
+---------
+Class =>	A blueprint =>	A blueprint for “Car”
+Object =>	A copy made from blueprint =>	A real car built from blueprint
+Attributes =>	Variables inside class =>	color = “Red”
+Methods =>	Functions inside class =>	start()
+
+---------
+
+Functions vs Methods
+
+Methods => Methods are basically functions which are written inside of a class
+Function => it is a normal function
+
+When we declare variable inside class, we need to use inside a special method called __init__(self), and it take self as input
+
+------
+
+self refers to the current object (instance) of the class.
+Whenever you create an object from a class, self lets you access:
+* the object's variables (attributes)
+* the object's methods
+
+Think of self as:
+"I, myself — this object."
+Example:
+
+my_car = Car()
+Here, my_car is the object. Inside the class, Python doesn’t know the name my_car. So it uses self.
+self = my_car inside class.
+
+class Car:
+    def __init__(self, brand):
+        self.brand = brand  # ‘self.brand’ means brand belongs to THIS object.
+
+my_car = Car("Tesla")
+print(my_car.brand)
+
+
+
+Why doesn't Python add self automatically?
+Because Python keeps everything explicit — It wants you to clearly understand what belongs to the class and what belongs to the object.
+Other languages hide this, Python makes it clear.
+
+Self = Object
+-------
+Whenever you call:
+
+my_car.start()
+
+
+Python secretly converts this into:
+
+Car.start(my_car)
+
+
+So the object automatically becomes the first argument — which is self.
+----------
+self =>	the current object
+Used for =>	accessing object variables & methods
+Mandatory in =>	all instance methods
+Automatically passed? =>	YES (you don’t pass it manually)
+Other languages call it	this => (Java, C++)
+
+
+----------
+'''class Atm:
+    def __init__(self):
+        self.pin = ("")
+        self.balance = 0
+
+        self.menu()
+    def menu(self):
+        user_input = input("""
+        Hello, how would you like to proceed?
+        1. Enter 1 to create pin
+        2. Enter 2 to create deposit
+        3. Enter 3 to withdraw
+        4. Enter 4 to check balance
+        5. Enter 5 to exit
+         """)
+        if user_input == "1":
+            self.create_pin()
+        elif user_input == "2":
+            self.deposit()
+        elif user_input == "3":
+            self.withdraw()
+        elif user_input == "4":
+            self.check_balance()
+        else:
+            print("Bue")
+
+    def create_pin(self):
+        self.pin = input("Enter pin: ")
+        print("Pin Set Successfully")
+
+    def deposit(self):
+        temp = input("Enter your pin")
+        if temp == self.pin:
+            amount = int(input("Enter amount to deposit: "))
+            self.balance += amount
+            print("Deposited Successfully")
+
+    def withdraw(self):
+        temp = input("Enter your pin")
+        if temp == self.pin:
+            amount = int(input("Enter amount to withdraw: "))
+            if amount <= self.balance:
+                self.balance -= amount
+                print("Withdrawed Successfully")
+            else:
+                print("You don't have enough money")
+        else:
+            print("Invalid Pin")
+
+    def check_balance(self):
+        temp = input("Enter your pin")
+        if temp == self.pin:
+            print("Your balance is:", self.balance)
+        else:
+            print("Invalid Pin")
+'''
+'''
+class Fraction:
+    def __init__(self, n, d):
+        self.n = n
+        self.d = d
+
+    def __str__(self):
+        return "{}/{}".format(self.n, self.d)
+
+    def __add__(self, other):
+        temp_num = self.n * other.d + self.d * other.n
+        temp_denom = self.d * other.d
+        return Fraction(temp_num, temp_denom)
+
+    def __sub__(self, other):
+        temp_num = self.n * other.d - self.d * other.n
+        temp_denom = self.d * other.d
+        return Fraction(temp_num, temp_denom)
+
+    def __mul__(self, other):
+        temp_num = self.n * other.n
+        temp_denom = self.d * other.d
+        return Fraction(temp_num, temp_denom)
+
+    def __truediv__(self, other):
+        temp_num = self.n * other.d
+        temp_denom = self.d * other.n
+        return Fraction(temp_num, temp_denom)
+
+
+x = Fraction(2, 3)
+y = Fraction(7, 5)
+
+print(x + y)
+print(x - y)
+print(x * y)
+print(x / y)
+'''
+
+
+
