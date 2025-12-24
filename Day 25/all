@@ -16,6 +16,78 @@ import pandas
 # data = pandas.read_csv('weather_data.csv')
 # print(data)
 # print(data['temp'])
+-----------------------------------------------
+# you can see documentation here
+# https://pandas.pydata.org/docs/reference/index.html
+
+import pandas
+
+data = pandas.read_csv("weathers.csv")
+print(data["temp"])
+
+data_to_dict = data.to_dict()
+print(data_to_dict)
+
+# Result
+'''python3 day25.py
+0    12
+1    14
+2    15
+3    14
+4    21
+5    22
+6    24
+Name: temp, dtype: int64
+{'day': {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday', 3: 'Thrusday', 4: 'Friday', 5: 'Saturday', 6: 'Sunday'}, 'temp': {0: 12, 1: 14, 2: 15, 3: 14, 4: 21, 5: 22, 6: 24}, 'condition': {0: 'sunny', 1: 'rain', 2: 'rain', 3: 'cloudy', 4: 'sunny', 5: 'sunny', 6: 'sunny'}}
+                                     '''
+
+t_list = data["temp"].to_list()
+print(t_list)
+
+# [12, 14, 15, 14, 21, 22, 24]
+
+# But what about the column
+print(data[data.day == "monday"])
+# Columns: [day, temp, condition]
+
+print(data[data.temp == data["temp"].max()])
+'''
+day  temp condition
+6  Sunday    24     sunny
+'''
+
+monday = data[data.day == "Monday"]
+monday_temp = int(monday.temp.iloc[0])
+monday_temp_to_F = monday_temp * 9/5 + 32
+print(monday_temp_to_F)
+
+# 53.6
+# .iloc[0] → gets the first value from that Series
+
+
+# Now create dataframe
+data_dict = {
+    "students":["Jam", "Den", "Kim"],
+    "scores": [70,67,91]
+}
+new_data = pandas.DataFrame(data_dict)
+print(new_data)
+
+'''
+  students  scores
+0      Jam      70
+1      Den      67
+2      Kim      91
+'''
+
+
+new_data.to_csv("new_data.csv")
+'''
+└─$ ls
+day25.py  new_data.csv  weathers.csv
+'''
+--------------------------------------------
+
 
 
 
