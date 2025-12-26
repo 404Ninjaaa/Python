@@ -88,6 +88,99 @@ day25.py  new_data.csv  weathers.csv
 '''
 --------------------------------------------
 
+# csv file
+# https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw/about_data
+'''import pandas
+
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data_20251226.csv")
+
+gray_squrels =  data[data["Primary Fur Color"] == "Gray"]
+gray_squrels =  len(data[data["Primary Fur Color"] == "Gray"])
+red_squrels =  len(data[data["Primary Fur Color"] == "Cinnamon"])
+Black_squrels =  len(data[data["Primary Fur Color"] == "Black"])
+
+print(gray_squrels)
+print(red_squrels)
+print(Black_squrels)
+
+'''
+# Result
+'''
+python3 day25_pandas.py
+              X          Y Unique Squirrel ID Hectare  ... Indifferent  Runs from  Other Interactions                                    Lat/Long
+2    -73.974281  40.775534     11B-PM-1014-08     11B  ...       False      False                 NaN  POINT (-73.97428114848522 40.775533619083)
+3    -73.959641  40.790313     32E-PM-1017-14     32E  ...       False       True                 NaN  POINT (-73.9596413903948 40.7903128889029)
+4    -73.970268  40.776213     13E-AM-1017-05     13E  ...       False      False                 NaN  POINT (-73.9702676472613 40.7762126854894)
+6    -73.954120  40.793181     36H-AM-1010-02     36H  ...       False      False                 NaN  POINT (-73.9541201789795 40.7931811701082)
+7    -73.958269  40.791737     33F-AM-1008-02     33F  ...        True      False                 NaN  POINT (-73.9582694312289 40.7917367820255)
+...         ...        ...                ...     ...  ...         ...        ...                 ...                                         ...
+3016 -73.966290  40.784330     23C-AM-1019-01     23C  ...        True      False                 NaN  POINT (-73.9662895079734 40.7843300758044)
+
+
+2473
+392
+103'''
+'''
+data_dict = {
+  "Fur Color": ["Gray","Cinnamon","Black"],
+  "Count": [gray_squrels, red_squrels, Black_squrels]
+}
+print(data_dict)
+
+df = pandas.DataFrame(data_dict)
+df.to_csv("squirel_count.csv")'''
+
+#Result
+'''
+2473
+392
+103
+{'Fur Color': ['Gray', 'Cinnamon', 'Black'], 'Count': [2473, 392, 103]}
+
+ls
+2018_Central_Park_Squirrel_Census_-_Squirrel_Data_20251226.csv  day25_pandas.py  new_data.csv  squirel_count.csv  weathers.csv
+'''
+
+import turtle
+import pandas
+
+
+screen = turtle.Screen()
+screen.tittle("US game")
+image = "state_img.gif"
+screen.addshape()
+turtle.shape(image)
+
+'''def get_mouse_click_coor(x,y):
+  print(x,y)
+
+turtle.onscreenclick(get_mouse_click_coor)
+
+turtle.mainloop()'''
+
+data = pandas.read_csv("50_states.csv")
+all_states = data.state.to_list()
+guessed = []
+
+while len(guessed) < 50:
+  answer = screen.textinput(tittle="Guess the state", prompt = "what's state name").tittle()
+  print(answer)
+
+  if answer == "Exit":
+    break
+  if answer in all_states:
+    guessed.append(answer)
+    t = turtle.Turtle()
+    t.hideturtle()
+    t.penup()
+    state_data = data[data.state == answer]
+    t.goto(int(state_data.x),int(state_data.y))
+    t.write(answer.item())
+
+
+screen.exitonclick()
+
+
 
 
 
