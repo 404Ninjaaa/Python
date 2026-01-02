@@ -1,0 +1,76 @@
+# Dictionary Comprehension
+'''
+Just like list comprehension, dictionary comprehension creates dictionaries in a concise way.
+
+Syntax:
+
+{key_expression: value_expression for item in iterable if condition}
+
+
+key_expression → key for the dict
+
+value_expression → value for the dict
+
+item → variable for each element
+
+if condition → optional
+
+Example: Create a dict of numbers and their squares
+
+numbers = [1,2,3,4,5]
+squared_dict = {n: n**2 for n in numbers}
+print(squared_dict)  
+# Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+
+With a condition (only even numbers):
+
+even_squared = {n: n**2 for n in numbers if n % 2 == 0}
+print(even_squared)  
+# Output: {2: 4, 4: 16}'''
+
+
+'''
+new_dict = {new_key:new_value for item in list}
+new_dict = {new_key:new_value for (key,value) in dict.items()}
+
+Example 0x1
+
+import random
+names = ["Alex", "Beth", "Caroline", "Dave" ,"Eleanor", "Freddie"]
+student_scores = {student:random.randint(1,100) for student in names}
+print(student_scores)
+#{'Alex': 46, 'Beth': 76, 'Caroline': 55, 'Dave': 57, 'Eleanor': 95, 'Freddie': 41}
+passed_students = {student:score for (student, score) in student_scores.items() if score >= 50}
+print(passed_students)
+# {'Beth': 56, 'Dave': 92, 'Eleanor': 59, 'Freddie': 85}
+'''
+
+
+"""
+Exercise 0x1
+
+sentence = "This is a simple sentence"
+result = {word:len(word) for word in sentence.split()}
+print(result)
+{'This': 4, 'is': 2, 'a': 1, 'simple': 6, 'sentence': 8}
+"""
+
+
+"""
+Exercise 0x2
+
+weather ={
+    'Monday': 12,
+    'Tuesday': 14,
+    'wednesday': 14,
+    'Thrusday': 18,
+    'Friday': 15,
+    'Saturday': 16,
+    'Sunday': 15
+}
+weather_in_f = {day:(temp_c*9/5) + 32 for (day,temp_c) in weather.items()}
+print(weather_in_f)
+{'Monday': 53.6, 'Tuesday': 57.2, 'wednesday': 57.2, 'Thrusday': 64.4, 'Friday': 59.0, 'Saturday': 60.8, 'Sunday': 59.0}
+"""
+
